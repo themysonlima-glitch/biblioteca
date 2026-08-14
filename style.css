@@ -64,7 +64,7 @@ h1 {
 }
 
 h2 {
-        text-align: center;
+    text-align: center;
     background-color: var(--prim);
     color: var(--sec);
     margin: 1rem 0;
@@ -74,7 +74,7 @@ h2 {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
+    justify-items: center;
 }
 .card {
     border: 1px solid black;
@@ -159,4 +159,32 @@ button:hover {
     background-color: var(--prim);
     color: var(--sec);
     border: 1px solid var(--ter)
+}
+
+
+@media only screen and (max-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
