@@ -165,6 +165,13 @@ button:hover {
 @media only screen and (max-width: 600px) {
     .card-container {
         grid-template-columns: repeat(1, 1fr);
+
+    }
+    form {
+        width: revert;
+    }
+    .form-item {
+        width: revert;
     }
 
     header {
@@ -180,6 +187,12 @@ button:hover {
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    form {
+        width: 50%;
+    }
+    .form-item {
+        width: 75%;
     }
 }
 
