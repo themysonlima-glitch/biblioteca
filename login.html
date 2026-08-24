@@ -25,9 +25,25 @@
                 <input type="email" name="email" id="email">
             </div>
 
-            <div class="form-item">
+            <div class="form-item form-senha">
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha">
+                const passwordEl = document.querySelector(".password") ;
+                const eyeButton = document.querySelector(".fa");
+                let isPass = true;
+                function togglePass() {
+                    if(isPass) {
+                        passwordEl.setAttribute("type","text");
+                        eyeButton.classList.remove("fa-eye-slash")
+                        eyeButton.classList.add("fa-eye");
+                        isPass = false;
+                    } else {
+                        passwordEl.setAttribute("type",password");
+                        eyeButton.classList.emove("fa-eye-slash")
+                        eyeButton.classList.add("fa-eye");
+                        isPass = false
+                    }
+                }
             </div>
 
             <button type="submit">Entrar</button>
@@ -35,5 +51,21 @@
 
         </form>
     </main>
+    <script>
+        function alternarSenha() {
+            const inputSenha = document.getElementById('senha');
+            const btnOlho = document.getElementById('btn-olho');
+
+            if (inputSenha.type === 'password') {
+                inputSenha.type = 'text';
+                btnOlho.textContent = 'imagens/visibility_off.png'; // Ícone quando a senha estiver visível
+            }
+            
+            else {
+                inputSenha.type = 'password';
+                btnOlho.textContent = 'imagens/visibility.png'; // Ícone quando a senha estiver oculta
+            }
+        }
+    </script>
 </body>
 </html>
