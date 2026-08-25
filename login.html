@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-        <header>
-            <img src="https://picsum.photos/160" alt="" class="logo">
 
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="cadastro.html">Cadastre-se</a> 
-                <a href="login.html">Entrar</a>
-            </nav>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://picsum.photos/160" alt="" class="logo">
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="cadastro.html">Cadastre-se</a>
+            <a href="login.html">Entrar</a>
+
+        </nav>
     </header>
 
     <main class="main-detalhe">
@@ -25,47 +32,20 @@
                 <input type="email" name="email" id="email">
             </div>
 
-            <div class="form-item form-senha">
+            <div class="form-item">
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha">
-                const passwordEl = document.querySelector(".password") ;
-                const eyeButton = document.querySelector(".fa");
-                let isPass = true;
-                function togglePass() {
-                    if(isPass) {
-                        passwordEl.setAttribute("type","text");
-                        eyeButton.classList.remove("fa-eye-slash")
-                        eyeButton.classList.add("fa-eye");
-                        isPass = false;
-                    } else {
-                        passwordEl.setAttribute("type",password");
-                        eyeButton.classList.emove("fa-eye-slash")
-                        eyeButton.classList.add("fa-eye");
-                        isPass = false
-                    }
-                }
+                <img src="imagens/visibility_off.png" alt="" id="btn-olho">
             </div>
 
             <button type="submit">Entrar</button>
-            <a href="esqueciminhasenha.html" type="submit">Esqueceu a senha?</a>
+
+            <a href="esqueciminhasenha.html">Esqueceu a senha?</a>
 
         </form>
     </main>
-    <script>
-        function alternarSenha() {
-            const inputSenha = document.getElementById('senha');
-            const btnOlho = document.getElementById('btn-olho');
 
-            if (inputSenha.type === 'password') {
-                inputSenha.type = 'text';
-                btnOlho.textContent = 'imagens/visibility_off.png'; // Ícone quando a senha estiver visível
-            }
-            
-            else {
-                inputSenha.type = 'password';
-                btnOlho.textContent = 'imagens/visibility.png'; // Ícone quando a senha estiver oculta
-            }
-        }
-    </script>
+
 </body>
+
 </html>
