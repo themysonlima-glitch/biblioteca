@@ -142,7 +142,7 @@ form a {
     width: 100%;
 }
 
-.form-item input {
+.form-item input, .form-item textarea, .form-item select {
     border-radius: 8px;
     padding: 0.5rem;
     border: none;
@@ -173,7 +173,39 @@ button:hover {
     width: 100%;
     
 }
+table, th, td {
+    border: 1px solid var(--prim);
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+}
 
+.container-centraliza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link-btn {
+    text-decoration: none;
+    background-color: var(--sec);
+    color: var(--prim);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin: 1rem;
+    border: 1px solid var(--prim);
+}
+
+.container-perfil {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto;
+    border: 1px solid var(--prim);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 50%;
+
+}
 
 @media only screen and (max-width: 600px) {
     .card-container {
