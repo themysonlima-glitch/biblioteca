@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-        <a href="index.html">Inicio</a>
-        <a href="cadastro.html">Cadastre-se</a> 
-        <a href="login.html">Entrar</a>
-        </nav>
-    </header>
+<?php
+require_once "_cabecalho.php";
+?>
 
     <main class="main-detalhe">
         <form action="" method="post" enctype="multipart/form-data">
@@ -52,8 +39,6 @@
         </form>
     </main>
 
-    <footer>
-        <p>2026</p>
-    </footer>
-</body>
-</html>
+   <?php
+require_once "_rodape.php";
+?>

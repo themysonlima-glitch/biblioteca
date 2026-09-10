@@ -14,9 +14,9 @@
         <img src="https://picsum.photos/160" alt="" class="logo">
 
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="cadastro.html">Cadastre-se</a>
-            <a href="login.html">Entrar</a>
+            <a href="index.php">Inicio</a>
+            <a href="cadastro.php">Cadastre-se</a>
+            <a href="login.php">Entrar</a>
         </nav>
         
     </header>

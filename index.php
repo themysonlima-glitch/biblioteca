@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-    <header>
-        <img src="https://picsum.photos/160" alt="" class="logo">
-
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="cadastro.html">Cadastre-se</a>
-            <a href="login.html">Entrar</a>
-        </nav>
-    </header>    
+<?php
+require_once "_cabecalho.php";
+?>
 
     <main>
         <img src="https://picsum.photos/500/350" alt="" id="jumbo">
+
+        <button id ="teste">CLIQUE</button>
         
         <h1>Biblioteca</h1>
 
         <div class="card-container">
-            <a href="detalhes.html">
+            <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -35,7 +20,7 @@
                     </div>
                 </div>
             </a>
-             <a href="detalhes.html">
+             <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -44,7 +29,7 @@
                         <h2>Título</h2>
                     </div>
                 </div>
-            </a> <a href="detalhes.html">
+            </a> <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -53,7 +38,7 @@
                         <h2>Título</h2>
                     </div>
                 </div>
-            </a> <a href="detalhes.html">
+            </a> <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -62,7 +47,7 @@
                         <h2>Título</h2>
                     </div>
                 </div>
-            </a> <a href="detalhes.html">
+            </a> <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -71,7 +56,7 @@
                         <h2>Título</h2>
                     </div>
                 </div>
-            </a> <a href="detalhes.html">
+            </a> <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -80,7 +65,7 @@
                         <h2>Título</h2>
                     </div>
                 </div>
-            </a> <a href="detalhes.html">
+            </a> <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -90,7 +75,7 @@
                     </div>
                 </div>
             </a>
-             <a href="detalhes.html">
+             <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -99,7 +84,7 @@
                         <h2>Título</h2>
                     </div>
                 </div>
-            </a> <a href="detalhes.html">
+            </a> <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -108,7 +93,7 @@
                         <h2>Título</h2>
                     </div>
                 </div>
-            </a> <a href="detalhes.html">
+            </a> <a href="detalhes.php">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/240" alt="">
@@ -120,9 +105,6 @@
             </a>
     </main>
 
-    <footer>
-        <p>2026</p>
-    </footer>
-</body>
-
-</html>
+ <?php
+require_once "_rodape.php";
+?>
