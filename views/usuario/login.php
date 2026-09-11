@@ -1,5 +1,5 @@
 <?php
-require_once "_cabecalho.php";
+require_once __DIR__ . "/../../templates/_cabecalho.php";
 ?>
 
     <main class="main-detalhe">
@@ -13,7 +13,7 @@ require_once "_cabecalho.php";
             <div class="form-item">
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha">
-                <img src="imagens/visibility_off.png" alt="" id="btn-olho">
+                <img src="/biblioteca/imagens/visibility_off.png" alt="" id="btn-olho">
             </div>
 
             <button type="submit">Entrar</button>
@@ -24,5 +24,5 @@ require_once "_cabecalho.php";
     </main>
 
 <?php
-require_once "_rodape.php";
+require_once __DIR__ . "/../../templates/_rodape.php";
 ?>

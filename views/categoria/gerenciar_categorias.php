@@ -1,9 +1,10 @@
 <?php
-require_once __DIR__ . "/../../templates/_cabecalho.php";
+require_once __DIR__ . "/../../templates/_cabecalho.php"
 ?>
 
     <main class="main-detalhe">
-        <a href="/biblioteca/views/categoria/cadastrar_categoria.php" class="link-btn">Adicionar Livro</a>
+        <h1>Gerenciar Categorias</h1>
+        <a href="/biblioteca/views/categoria/cadastrar_categoria.php" class="link-btn">+ Adicionar Livro</a>
         <table>
             <tr>
                 <th>Nome da Categoria</th>
@@ -19,5 +20,5 @@ require_once __DIR__ . "/../../templates/_cabecalho.php";
     </main>
 
 <?php
-require_once "_rodape.php";
+require_once __DIR__ . "/../../templates/_rodape.php"
 ?>

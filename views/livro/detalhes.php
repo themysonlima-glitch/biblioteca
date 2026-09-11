@@ -1,5 +1,5 @@
 <?php
-require_once "_cabecalho.php";
+require_once __DIR__ . "/../../templates/_cabecalho.php";
 ?>
 
     <main class="main-detalhe">
@@ -11,7 +11,7 @@ require_once "_cabecalho.php";
             <h2>Titulo</h2>
             <br>
             <p>2023</p>
-            <br>
+        </br>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ad, reprehenderit asperiores quaerat
                 perferendis eveniet earum voluptates molestiae, reiciendis aperiam id aliquid, expedita quae! Cupiditate
                 veritatis dolores laboriosam saepe ea.</p>
@@ -19,5 +19,5 @@ require_once "_cabecalho.php";
     </main>
     
 <?php
-require_once "_rodape.php";
+require_once __DIR__ . "/../../templates/_rodape.php";
 ?>

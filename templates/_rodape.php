@@ -4,9 +4,4 @@
 
 
 </body>
-
 </html>
-
-<?php
-require_once "_rodape.php";
-?>

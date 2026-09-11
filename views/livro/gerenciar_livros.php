@@ -1,9 +1,9 @@
 <?php
-require_once "_cabecalho.php";
+require_once __DIR__ . "/../../templates/_cabecalho.php";
 ?>
 
     <main class="container-centraliza">
-        <a href="cadastro_livro.php" class="link-btn">Adicionar Livro</a>
+        <a href="/biblioteca/views/categoria/cadastrar_livro.php" class="link-btn">Adicionar Livro</a>
              <table>
             <tr>
                 <th>Título</th>
@@ -28,5 +28,5 @@ require_once "_cabecalho.php";
     </main>
 
  <?php
-require_once "_rodape.php";
+require_once __DIR__ . "/../../templates/_rodape.php";
 ?>

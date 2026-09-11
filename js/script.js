@@ -43,11 +43,11 @@ let visivel = false
 olho.addEventListener('click', () => {
     // ao clicar, abre o olho e exibe o valor do campo
     if (visivel == false) {
-        olho.src = "imagens/visibility.png"
+        olho.src = "/biblioteca/imagens/visibility.png"
         senha.type = "text"
         visivel = true
     } else {
-        olho.src = "imagens/visibility_off.png"
+        olho.src = "/biblioteca/imagens/visibility_off.png"
         senha.type = "password"
         visivel = false
     }
