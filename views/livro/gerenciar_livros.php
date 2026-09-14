@@ -3,28 +3,36 @@ require_once __DIR__ . "/../../templates/_cabecalho.php";
 ?>
 
     <main class="container-centraliza">
-        <a href="/biblioteca/views/categoria/cadastrar_livro.php" class="link-btn">Adicionar Livro</a>
-             <table>
-            <tr>
-                <th>Título</th>
-                <th>Ano</th>
-                <th>Categoria</th>
-                <thcolspan="2">Opcões</th>
-            </tr>
-            <tr>
-                <td>Livro1</td>
-                <td>2026</td>
-                <td>Categoria 1</td>
-                <td>Editar</td>
-            </tr>
+        <h1>Gerenciar Livros</h1>
+        <a href="/biblioteca/views/livro/gerenciar_livro.php" class="link-btn">Adicionar Livro</a>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Ano</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Dom Casmuro</td>
+                    <td>Machado de Assis</td>
+                    <td>1899</td>
+                    <td>Romance</td>
+                    <td class="acoes">
+                        <button class="btn-editar">Editar</button>
+                        <button class="btn-deletar">Deletar</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
 
-
-            
-            <button type="submit">Cadastrar</button>
-
-
-        </form>
     </main>
 
  <?php

@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php
+require_once __DIR__ . "/templates/_cabecalho.php";
+?>
+    <main class="main-detalhe">
+        <form action="" method="post" enctype="multipart/form-data">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    </main>
 
-<body>
-    <header>
-
-        <img src="https://picsum.photos/160" alt="" class="logo">
-
-        <nav>
-            <a href="index.php">Inicio</a>
-            <a href="cadastro.php">Cadastre-se</a>
-            <a href="login.php">Entrar</a>
-        </nav>
-        
-    </header>
-</body>
-
-</html>
+<?php
+require_once __DIR__ . "/../../templates/_rodape.php";
+?>
