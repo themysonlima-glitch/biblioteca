@@ -1,13 +1,8 @@
 <?php
 require_once __DIR__ . "/templates/_cabecalho.php";
+require_once __DIR__ . "/models/livro.php";
 
-$conn = new PDO("mysql:host=localhost;dbname=biblioteca;charset=utf8mb4", "root", "");
-$query = "SELECT * FROM livro";
-$resultado = $conn->query($query)->fetchAll();
-
-// echo "<pre>";
-// var_dump($resultado);
-// echo "</pre>";
+$resultado = Livro::listar();
 
 ?>
 
@@ -17,24 +12,29 @@ $resultado = $conn->query($query)->fetchAll();
         <button id ="teste">CLIQUE</button>
         
         <h1>Biblioteca</h1>
+        <?php if (count($resultado) == 0): ?>
+            <p>Nenhum livro encontrado!</p>
+        <?php else: ?>
+            <div class="card-container">
+                <?php foreach($resultado as $livro): ?>
+                <a href="/biblioteca/views/livro/detalhes.php?id=<?= $livro['id_livro']?>">
+                    <div class="card">
+                        <div class="card-img">
+                            <?php if($livro ['capa'] == null): ?>
+                                <img src="/biblioteca/imagens/capas/generica.png" alt="">
+                            <?php else: ?>
+                                <img src="/biblioteca/imagens/capas/uploads/<?= $livro['capa']?>" alt"">
+                            <?php endif; ?>
+                        </div>
+                        <div class="card-text">
+                            <h2><?= $livro['titulo'] ?></h2>
+                        </div>
+                    </div>
+                </a>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
 
-        <div class="card-container">
-            <?php foreach($resultado as $livro): ?>
-            <a href="/biblioteca/views/livro/detalhes.php">
-                <div class="card">
-                    <div class="card-img">
-                        <?php if($livro ['capa']==null): ?>
-                            <img src="/biblioteca/imagens/capas/generica.png" alt="">
-                        <?php else: ?>
-                            <img src="/biblioteca/imagens/capas/uploads/<?= $livro['capa']?>" alt"">
-                        <?php endif; ?>
-                    </div>
-                    <div class="card-text">
-                        <h2><?= $livro['titulo'] ?></h2>
-                    </div>
-                </div>
-             </a>
-             <?php endforeach; ?>
     </main>
 
 <?php

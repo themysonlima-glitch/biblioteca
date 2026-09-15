@@ -2,28 +2,21 @@
 require_once __DIR__ . "/../../templates/_cabecalho.php";
 ?>
 
-    <main class="main-detalhe">
-        <div style="display:flex; flex-direction: column;">
-
-        
+    <main class="container-centraliza">
+        <div class="container-perfil">
             <div class="container-perfil">
-                <div class="form-item">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" value="Cristiano Ribeiro">
+                <div class="itens-perfil">
+                    <p>Nome da Pessoa</p>
+                    <p>Email da Pessoa</p>
                 </div>
 
-                <div class="form-item">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" value="cristianoribeiro.@gmail.com">
+                <div class="itens-perfil">
+                    <a href="/biblioteca/views/livro/gerenciar_livros.php" class="link-btn">Gerenciar livros</a>
+                    <a href="/biblioteca/views/categoria/gerenciar_categorias.php" class="link-btn">Gerenciar categorias</a>
                 </div>
-            </div>
-
-            <div class="botoes">
-                <a href="/biblioteca/views/livro/gerenciar_livros.php" class="link-btn">Gerenciar livros</a>
-                <a href="/biblioteca/views/categoria/gerenciar_categorias.php" class="link-btn">Gerenciar categorias</a>
             </div>
         </div>
     </main>
-    <?php
+<?php
 require_once __DIR__ . "/../../templates/_rodape.php";
-    ?>
+?>

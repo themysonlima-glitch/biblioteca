@@ -1,20 +1,32 @@
 <?php
 require_once __DIR__ . "/../../templates/_cabecalho.php";
+require_once __DIR__ . "/../../models/livro.php";
+
+$id = $_GET['id'];
+
+$livro = Livro::buscarPorId($id);
 ?>
 
     <main class="main-detalhe">
         <div id="img-detalhe">
-            <img src="https://picsum.photos/300/400" alt="">
-
+            <?php if($livro ['capa'] == null): ?>
+                <img src="/biblioteca/imagens/capas/generica.png" alt="">
+            <?php else: ?>
+                <img src="/biblioteca/imagens/capas/uploads/<?= $livro['capa']?>" alt"">
+            <?php endif; ?>
         </div>
+
         <div id="texto-detalhe">
-            <h2>Titulo</h2>
+            <h2><?= $livro['titulo'] ?></h2>
             <br>
-            <p>2023</p>
-        </br>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ad, reprehenderit asperiores quaerat
-                perferendis eveniet earum voluptates molestiae, reiciendis aperiam id aliquid, expedita quae! Cupiditate
-                veritatis dolores laboriosam saepe ea.</p>
+            <p><?= $livro ['ano_pub'] ?></p>
+            <br>
+            <p><?= $livro ['autor'] ?></p>
+            <br>
+            <p><?= $livro ['nome'] ?></p>
+            <br>
+            <p><?= $livro ['resumo'] ?></p>
+            
         </div>
     </main>
     
