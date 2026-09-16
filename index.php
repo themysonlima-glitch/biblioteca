@@ -7,7 +7,7 @@ $resultado = Livro::listar();
 ?>
 
     <main>
-        <img src="https://picsum.photos/500/350" alt="" id="jumbo">
+        <img src="https://picsum.photos/900/300" alt="" id="jumbo">
 
         <button id ="teste">CLIQUE</button>
         
