@@ -2,9 +2,20 @@
 require_once __DIR__ . "/../../templates/_cabecalho.php";
 require_once __DIR__ . "/../../models/livro.php";
 
-$id = $_GET['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-$livro = Livro::buscarPorId($id);
+    $livro = Livro::buscarPorId($id);
+} else {
+    header("Location: /biblioteca/index.php");
+    exit();
+}
+
+if(!$livro) {
+    header("Location: /biblioteca/index.php");
+    exit();
+}
+
 ?>
 
     <main class="main-detalhe">

@@ -4,7 +4,7 @@ require_once __DIR__ . "/../../templates/_cabecalho.php";
 
     <main class="container-centraliza">
         <h1>Gerenciar Livros</h1>
-        <a href="/biblioteca/views/livro/gerenciar_livro.php" class="link-btn">Adicionar Livro</a>
+        <a href="/biblioteca/views/livro/gerenciar_livro.php" class="link-btn">+Adicionar Livro</a>
 
         <table>
             <thead>

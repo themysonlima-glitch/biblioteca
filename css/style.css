@@ -238,6 +238,17 @@ table, th, td {
 
 }
 
+.itens-perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itens-perfil p {
+    margin: 1rem;
+}
+
 @media only screen and (max-width: 600px) {
     .card-container {
         grid-template-columns: repeat(1, 1fr);
