@@ -11,7 +11,7 @@ class Usuario {
     public function inserir($nome, $email, $senha, $foto,)
     {
         try {
-            // criar conexao]
+            // criar conexao
             $conexao = Conexao::conectar();
             // criar o sql
             $sql = "INSERT INTO usuario (nome, email, senha, foto) VALUES (:nome, :email, :senha :foto);";

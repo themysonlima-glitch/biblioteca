@@ -5,7 +5,7 @@ require_once __DIR__ . "/../../templates/_cabecalho.php";
     <main class="container-centraliza">
         <div class="container-perfil">
             <div class="itens-perfil">
-                <p>Nome da Pessoa</p>
+                <p><?= $SESSION['nome'] ?></p>
                 <p>Email da Pessoa</p>
             </div>
                 
