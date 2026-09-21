@@ -13,6 +13,7 @@ class Autenticacao {
         $usuario = $stmt->fetch();
 
         if($usuario && password_verify($senha, $usuario['senha'])) {
+            $SESSION['id_usuario'] = $usuario['id_usuario'];
             $_SESSION ['nome'] = $usuario['nome'];
             $_SESSION ['email'] = $usuario['email'];
             $_SESSION ['foto'] = $usuario['foto'];
@@ -21,8 +22,32 @@ class Autenticacao {
             exit();
         }
 
+        $_SESSION['aviso'] = "Email ou Senha Inválidos";
         header('Location: /biblioteca/views/usuario/perfil.php');
         exit();
+
+    }
+
+    public static function estaAutenticado() {
+        session_start();
+        return isset($_SESSION['id_usuario']);
+    }
+
+    public static function logout() {
+        session_start();
+        $SESSION = [];
+        session_destroy();
+
+        header("Location: /biblioteca/views/usuario/login.php");
+        exit();
+    }
+
+    public static function exigirAutenticacao()
+    {
+        if (!self::estaAutenticado()) {
+            header("Location: /biblioteca/views/usuario/login.php");
+            exit();
+        }
 
     }
 }

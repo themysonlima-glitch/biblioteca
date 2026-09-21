@@ -1,5 +1,11 @@
 <?php
 require_once __DIR__ . "/../../templates/_cabecalho.php"
+
+require_once __DIR__ . "/../../models/categoria.php";
+
+$resultado = Categoria::listar();
+
+
 ?>
 
     <main class="container-centraliza">
@@ -16,14 +22,16 @@ require_once __DIR__ . "/../../templates/_cabecalho.php"
             </thead>
 
             <tbody>
+                <?php foreach($resultado as $categoria): ?>
                  <tr>
-                    <td>Categoria1</td>
+                    <td><?=Categoria 1['nome'] ?></td>
                     <td>Romance</td>
                     <td class="acoes">
                         <button class="btn-editar">Editar</button>
                         <button class="btn-deletar">Deletar</button>
                     </td>
                 </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </main>

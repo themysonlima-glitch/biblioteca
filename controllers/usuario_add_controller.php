@@ -22,5 +22,5 @@ $usuario = New Usuario();
 $usuario->inserir($nome, $email, $senha, $foto);
 
 // redirecionar
-header('Location: /biblioteca/views/usuario/login.php')
+header('Location: /biblioteca/views/usuario/login.php');
 exit();

@@ -5,7 +5,7 @@ class Conexao{
     public static function conectar(){
         $env = parse_ini_file(__DIR__ . '/../.env');
 
-        $host = $env ['DB_HOST'];
+        $host = $env['DB_HOST'];
         $db = $env['DB_NAME'];
         $user = $env['DB_USER'];
         $pass = $env['DB_PASS'];

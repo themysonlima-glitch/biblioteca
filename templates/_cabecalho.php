@@ -1,5 +1,6 @@
 <?php
-session_start();
+require_once __DIR__ . "/../auth/autenticacao.php";
+
 ?>
 
 
@@ -22,8 +23,16 @@ session_start();
 
         <nav>
             <a href="/biblioteca/index.php">Início</a>
-            <a href="/biblioteca/views/usuario/cadastro.php">Cadastre-se</a>
-            <a href="/biblioteca/views/usuario/login.php">Entrar</a>
-            <a href="/biblioteca/views/usuario/perfil.php">Perfil</a>
+            <?php if(!Autenticacao::estaAutenticado()): ?>
+                <a href="/biblioteca/views/usuario/cadastro.php">Cadastre-se</a>
+                <a href="/biblioteca/views/usuario/login.php">Entrar</a>
+            <?php else: ?>
+                <a href="/biblioteca/views/usuario/perfil.php">Perfil</a>
+                <a href= "/biblioteca/controllers/logout_controller.php">Sair</a>
+            <?php endif; ?>
         </nav>
     </header>
+
+    <?php
+        require_once __DIR__ . "/_avisos.php";
+    ?>
