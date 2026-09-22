@@ -15,3 +15,21 @@ class Categoria {
             echo $e->getMessage();
         }
     }
+
+    public function inserir($nome) {
+        try {
+            // criar conexao
+            $conexao = Conexao::conectar();
+            // criar o sql
+            $sql = "INSERT INTO categoria (nome) VALUES (:nome)";
+            // preparar o sql
+            $stmt = $conexao->prepare($sql);
+            // substituir os dados depois de preparado
+            $stmt->bindValue(':nome', $nome);
+            // executar
+            $stmt->execute();
+    } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+}

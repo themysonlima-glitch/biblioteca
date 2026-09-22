@@ -9,30 +9,21 @@ $resultado = Categoria::listar();
 ?>
 
     <main class="container-centraliza">
-        <h1>Gerenciar Categorias</h1>
         <a href="/biblioteca/views/categoria/cadastrar_categoria.php" class="link-btn">+ Adicionar Categoria</a>
-
         <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Ações</th>
-                 </tr>
-            </thead>
+            <tr>
+                <th>Nome da Categoria</th>
+                <th colspan="2">opções</th>
+            </tr>
 
-            <tbody>
-                <?php foreach($resultado as $categoria): ?>
-                 <tr>
-                    <td><?=Categoria 1['nome'] ?></td>
-                    <td>Romance</td>
-                    <td class="acoes">
-                        <button class="btn-editar">Editar</button>
-                        <button class="btn-deletar">Deletar</button>
-                    </td>
+            
+            <?php foreach($resultado as $categoria): ?>
+                <tr>
+                    <td><?=Categoria['nome'] ?></td>
+                    <td><a href="">Editar</a></td>
+                    <td><a href="">Deletar</a></td>
                 </tr>
-                <?php endforeach; ?>
-            </tbody>
+            <?php endforeach; ?>
         </table>
     </main>
 
