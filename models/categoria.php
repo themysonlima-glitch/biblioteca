@@ -49,7 +49,7 @@ class Categoria {
     public function carregar($id){
         try {
             $conexao = Conexao::conectar();
-            $sql = "SELECT FROM categoria WHERE id_categoria = :id";
+            $sql = "SELECT * FROM categoria WHERE id_categoria = :id";
             $stmt = $conexao->prepare($sql);
             $stmt->bindValue(':id', $id);
             $stmt->execute();
