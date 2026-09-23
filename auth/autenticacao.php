@@ -13,7 +13,7 @@ class Autenticacao {
         $usuario = $stmt->fetch();
 
         if($usuario && password_verify($senha, $usuario['senha'])) {
-            $SESSION['id_usuario'] = $usuario['id_usuario'];
+            $_SESSION['id_usuario'] = $usuario['id_usuario'];
             $_SESSION ['nome'] = $usuario['nome'];
             $_SESSION ['email'] = $usuario['email'];
             $_SESSION ['foto'] = $usuario['foto'];

@@ -8,5 +8,5 @@ $categoria = New Categoria();
 $categoria->inserir($nome);
 
 $_SESSION['aviso'] = "Categoria inserida com sucesso";
-header('location: /biblioteca/views/categoria/gerenciar_categoria.php');
+header('location: /biblioteca/views/categoria/gerenciar_categorias.php');
 exit();
