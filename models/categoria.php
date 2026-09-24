@@ -64,6 +64,20 @@ class Categoria {
             echo $e->getMessage();
         }
     }
+
+    public function atualizar($nome, $id) {
+        try {
+            $conexao = Conexao::conectar();
+            $sql = "UPDATE categoria SET nome = :nome WHERE id_categoria = :id";
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(':nome', $nome);
+            $stmt->bindValue(':id', $id);
+            $stmt->execute();
+        } catch (PDOException $e) { // executa caso aconteça um erro
+            // mostra o erro encontrado
+            echo $e->getMessage();
+        }
+    }
  
     public function getId(){
         return $this->id_categoria;
