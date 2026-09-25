@@ -19,7 +19,7 @@ require_once __DIR__ . "/../auth/autenticacao.php";
 
 <body>
     <header>
-        <img src="https://picsum.photos/160" alt="" class="logo">
+        <img src="/biblioteca/imagens/logo_sem_fundo.png" alt="" class="logo">
 
         <nav>
             <a href="/biblioteca/index.php">Início</a>

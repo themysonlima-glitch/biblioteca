@@ -1,23 +1,26 @@
 <?php
 require_once __DIR__ . "/../../templates/_cabecalho.php";
+require_once __DIR__ . "/../../models/categoria.php";
+
+$resultado = Categoria::listar();
 ?>
 
     <main class="main-detalhe">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="/biblioteca/controllers/livro_add_controller.php" method="post" enctype="multipart/form-data">
 
             <div class="form-item">
                 <label for="titulo">Titulo</label>
-                <input type="text" name="Titulo" id="titulo" prequired>
+                <input type="text" name="titulo" id="titulo" required>
             </div>
 
             <div class="form-item">
                 <label for="ano">Ano de publicaçao</label>
-                <input type="text" name="ano" id="ano" prequired>
+                <input type="text" name="ano" id="ano" required>
             </div>
 
             <div class="form-item">
                 <label for="autor">Autor do livro</label>
-                <input type="text" name="autor" id="autor" prequired>
+                <input type="text" name="autor" id="autor" required>
             </div>
 
             <div class="form-item">
@@ -28,10 +31,18 @@ require_once __DIR__ . "/../../templates/_cabecalho.php";
             <div class="form-item">
                 <label for="autor">Categoria</label>
                 <select name="categoria" id="categoria">
-                    <option value="cat1">Categoria1</option>
-                    <option value="cat2">Categoria2</option>
+                    <?php foreach($resultado as $categoria): ?>
+                    <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['nome'] ?></option>
+                    <?php endforeach; ?>
+                    
                 </select>
             </div>
+
+            <div class="form-item">
+                <label for="foto">Foto de Perfil</label>
+                <input type="file" name="foto" id="foto" required>
+            </div>
+
 
             <button type="submit">Cadastrar</button>
 

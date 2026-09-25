@@ -97,9 +97,9 @@ h2 {
     width: 200px;
     height: 250px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
     overflow: hidden;
-    font-size: xx-small;
+    font-size: x-small;
 }
 
 .card:hover {
