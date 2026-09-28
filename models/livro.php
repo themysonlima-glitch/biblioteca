@@ -15,7 +15,7 @@ class Livro {
     public static function listar() {
         try {
             $conexao = Conexao::conectar();
-            $sql = "SELECT * FROM livro";
+            $sql = "SELECT livro.*, categoria.nome FROM livro JOIN categoria ON livro.id_categoria = categoria.id_categoria";
             $stmt = $conexao->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll();
@@ -100,7 +100,7 @@ class Livro {
     public function atualizar($titulo, $ano_pub, $autor, $resumo, $capa, $id_categoria, $id_livro) {
         try {
             $conexao = Conexao::conectar();
-            $sql = "UPDATE livro SET titulo = :titulo, ano_pub = :ano_pub, autor = :autor, resumo = :resumo, capa = :capa, id_categoria = :id_catgeroria WHERE id_livro = :id";
+            $sql = "UPDATE livro SET titulo = :titulo, ano_pub = :ano_pub, autor = :autor, resumo = :resumo, capa = :capa, id_categoria = :id_categoria WHERE id_livro = :id";
             $stmt = $conexao->prepare($sql);
             $stmt->bindValue(':titulo', $titulo);
             $stmt->bindValue(':ano_pub', $ano_pub);
@@ -108,11 +108,53 @@ class Livro {
             $stmt->bindValue(':resumo', $resumo);
             $stmt->bindValue(':capa', $capa);
             $stmt->bindValue(':id_categoria', $id_categoria);
-            $stmt->bindValue(':id_livro', $id_livro);
+            $stmt->bindValue(':id', $id_livro);
             $stmt->execute();
         } catch (PDOException $e) { // executa caso aconteça um erro
             // mostra o erro encontrado
             echo $e->getMessage();
         }
+    }
+
+    public function atualizarSemCapa($titulo, $ano_pub, $autor, $resumo, $id_categoria, $id_livro) {
+        try {
+            $conexao = Conexao::conectar();
+            $sql = "UPDATE livro SET titulo = :titulo, ano_pub = :ano_pub, autor = :autor, resumo = :resumo, id_categoria = :id_categoria WHERE id_livro = :id";
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(':titulo', $titulo);
+            $stmt->bindValue(':ano_pub', $ano_pub);
+            $stmt->bindValue(':autor', $autor);
+            $stmt->bindValue(':resumo', $resumo);
+            $stmt->bindValue(':id_categoria', $id_categoria);
+            $stmt->bindValue(':id', $id_livro);
+            $stmt->execute();
+        } catch (PDOException $e) { // executa caso aconteça um erro
+            // mostra o erro encontrado
+            echo $e->getMessage();
+        }
+    }
+
+    public function getId() {
+        return $this->id_livro;
+    }
+
+    public function getTitulo() {
+        return $this->titulo;
+    }
+
+    public function getAnoPub() {
+        return $this->ano_pub;
+    }
+    public function getAutor() {
+        return $this->autor;
+    }
+    public function getResumo() {
+        return $this->resumo;
+    }
+    public function getCapa() {
+        return $this->capa;
+    }
+    public function getCategoria() {
+        return $this->id_categoria;
     }
 }

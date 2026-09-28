@@ -1,5 +1,8 @@
 <?php
 require_once __DIR__ . "/../../templates/_cabecalho.php";
+require_once __DIR__ . "/../../models/livro.php";
+
+$resultado = Livro::listar();
 ?>
 
 <main class="container-centraliza">
@@ -11,14 +14,20 @@ require_once __DIR__ . "/../../templates/_cabecalho.php";
             <th>Categoria</th>
             <th colspan="2">Opções</th>
         </tr>
-        
+        <?php foreach($resultado as $livro): ?>
         <tr>
-            <td>Livro 1</td>
-            <td>2026</td>
-            <td>Categoria 1</td>
-            <td>Editar</td>
-            <td>Deletar</td>
+            
+            <td><?= $livro['titulo'] ?></td>
+
+            <td><?= $livro['ano_pub'] ?></td>
+
+            <td><?= $livro['nome'] ?></td>
+
+            <td><a href="/biblioteca/views/livro/editar_livro.php?id_livro=<?=$livro['id_livro']?>">Editar</a></td>
+
+            <td><a href="/biblioteca/controllers/deletar_livro_controller.php?id_livro=<?=$livro['id_livro']?>">Editar</a>Deletar</td>
         </tr>
+        <?php endforeach; ?>
     </table>
 
 </main>

@@ -14,12 +14,12 @@ if(!empty($_FILES['foto']['name'])) {
     $caminho = __DIR__ . "/../imagens/fotos/uploads/" . $nomedafoto;
     move_uploaded_file($foto['tmp_name'], $caminho);
 } else {
-    $foto = null;
+    $nomedafoto = null;
 }
 
 // criar um obj do tipo usuario para o inserir
 $usuario = New Usuario();
-$usuario->inserir($nome, $email, $senha, $foto);
+$usuario->inserir($nome, $email, $senha, $nomedafoto);
 
 // redirecionar
 header('Location: /biblioteca/views/usuario/login.php');
