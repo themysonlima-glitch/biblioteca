@@ -12,9 +12,9 @@ require_once __DIR__ . "/../../templates/_cabecalho.php";
             
 
             <div class="itens-perfil">
-                <a href="/biblioteca/views/livro/gerenciar_livros.php" class="link-btn">Gerenciar livros</a>
+                <a href="/biblioteca/views/livro/gerenciar_livros.php" class="link-btn">Gerenciar Livros</a>
            
-                <a href="/biblioteca/views/categoria/gerenciar_categorias.php" class="link-btn">Gerenciar categorias</a>
+                <a href="/biblioteca/views/categoria/gerenciar_categorias.php" class="link-btn">Gerenciar Categorias</a>
             </div>
         </div>
     </main>

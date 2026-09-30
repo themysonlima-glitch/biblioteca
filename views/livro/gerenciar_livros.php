@@ -25,7 +25,7 @@ $resultado = Livro::listar();
 
             <td><a href="/biblioteca/views/livro/editar_livro.php?id_livro=<?=$livro['id_livro']?>">Editar</a></td>
 
-            <td><a href="/biblioteca/controllers/deletar_livro_controller.php?id_livro=<?=$livro['id_livro']?>">Editar</a>Deletar</td>
+            <td><a href="/biblioteca/controllers/deletar_livro_controller.php?id_livro=<?=$livro['id_livro']?>">Deletar</a></td>
         </tr>
         <?php endforeach; ?>
     </table>

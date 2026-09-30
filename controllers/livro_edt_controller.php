@@ -25,6 +25,6 @@ if(!empty($_FILES['capa']['name'])) {
 }
 
 
-$_SESSION['aviso'] = "Livro editada com sucesso!";
+$_SESSION['aviso'] = "Livro editado com sucesso!";
 header('Location: /biblioteca/views/livro/gerenciar_livros.php');
 exit();
