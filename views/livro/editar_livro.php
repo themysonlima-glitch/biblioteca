@@ -21,7 +21,7 @@ $livro->carregar($id);
 
             <div class="form-item">
                 <label for="ano">Ano de publicaçao</label>
-                <input type="text" name="ano" id="ano" value="<?= $livro->getAnoPub() ?>" required>
+                <input type="text" name="ano" id="ano" max="2026" value="<?= $livro->getAnoPub() ?>" required>
             </div>
 
             <div class="form-item">
